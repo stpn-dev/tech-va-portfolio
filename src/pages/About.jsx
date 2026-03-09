@@ -11,15 +11,15 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | Tech VA Portfolio</title>
+        <title>About | DevLab Studios</title>
         <meta name="description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
-        <meta property="og:title" content="About - Tech VA Portfolio" />
+        <meta property="og:title" content="About - DevLab Studios" />
         <meta property="og:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.devlabstudios.com/about" />
         <meta property="og:image" content="/screenshots/portfolio-about.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About - Tech VA Portfolio" />
+        <meta name="twitter:title" content="About - DevLab Studios" />
         <meta name="twitter:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
         <meta name="twitter:image" content="/screenshots/portfolio-about.png" />
       </Helmet>

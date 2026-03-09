@@ -13,15 +13,15 @@ function Experiences() {
   return (
     <>
       <Helmet>
-        <title>Experiences | Tech VA Portfolio</title>
+        <title>Experiences | DevLab Studios</title>
         <meta name="description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
-        <meta property="og:title" content="Experiences - Tech VA Portfolio" />
+        <meta property="og:title" content="Experiences - DevLab Studios" />
         <meta property="og:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/experiences" />
         <meta property="og:image" content="/screenshots/portfolio-experiences.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Experiences - Tech VA Portfolio" />
+        <meta name="twitter:title" content="Experiences - DevLab Studios" />
         <meta name="twitter:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
         <meta name="twitter:image" content="/screenshots/portfolio-experiences.png" />
       </Helmet>

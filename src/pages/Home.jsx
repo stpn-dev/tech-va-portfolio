@@ -30,15 +30,15 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | Tech VA Portfolio</title>
+        <title>Home | DevLab Studios</title>
         <meta name="description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
-        <meta property="og:title" content="Tech VA Portfolio - Home" />
+        <meta property="og:title" content="DevLab Studios - Home" />
         <meta property="og:description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/" />
         <meta property="og:image" content="/screenshots/portfolio-home.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tech VA Portfolio - Home" />
+        <meta name="twitter:title" content="DevLab Studios - Home" />
         <meta name="twitter:description" content="Building websites and automation systems for modern businesses." />
         <meta name="twitter:image" content="/screenshots/portfolio-home.png" />
         <script type="application/ld+json">{JSON.stringify(getPersonSchema())}</script>

@@ -109,15 +109,15 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact | Tech VA Portfolio</title>
+        <title>Contact | DevLab Studios</title>
         <meta name="description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
-        <meta property="og:title" content="Contact - Tech VA Portfolio" />
+        <meta property="og:title" content="Contact - DevLab Studios" />
         <meta property="og:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/contact" />
         <meta property="og:image" content="/screenshots/portfolio-contact.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact - Tech VA Portfolio" />
+        <meta name="twitter:title" content="Contact - DevLab Studios" />
         <meta name="twitter:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
         <meta name="twitter:image" content="/screenshots/portfolio-contact.png" />
       </Helmet>

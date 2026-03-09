@@ -61,9 +61,9 @@ export const getOrganizationSchema = () => ({
 export const getWebsiteSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Website',
-  name: 'Tech VA Portfolio',
+  name: 'DevLab Studios',
   url: 'https://www.devlabstudios.com',
-  description: 'Tech VA Portfolio - Web Builder & Automation Specialist',
+  description: 'DevLab Studios - Web Builder & Automation Specialist',
   publisher: {
     '@type': 'Organization',
     name: 'DevLab Studios',

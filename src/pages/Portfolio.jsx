@@ -23,15 +23,15 @@ function Portfolio() {
   return (
     <>
       <Helmet>
-        <title>Portfolio | Tech VA Portfolio</title>
+        <title>Portfolio | DevLab Studios</title>
         <meta name="description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
-        <meta property="og:title" content="Portfolio - Tech VA Portfolio" />
+        <meta property="og:title" content="Portfolio - DevLab Studios" />
         <meta property="og:description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/portfolio" />
         <meta property="og:image" content="/screenshots/portfolio-portfolio.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portfolio - Tech VA Portfolio" />
+        <meta name="twitter:title" content="Portfolio - DevLab Studios" />
         <meta name="twitter:description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
         <meta name="twitter:image" content="/screenshots/portfolio-portfolio.png" />
       </Helmet>
