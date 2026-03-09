@@ -11,7 +11,7 @@ export const coreTools = [
   { key: 'n8n', label: 'n8n', icon: 'Wrench' },
   { key: 'google', label: 'Google Workspace', icon: 'Mail' },
   { key: 'notion', label: 'Notion / Airtable', icon: 'Lightbulb' },
-  { key: 'apis', label: 'APIs & Webhooks', icon: 'Code2' },
+  { key: 'apis', label: 'API Integrations', icon: 'Code2' },
   { key: 'openai', label: 'OpenAI / AI Tools', icon: 'Robot' },
   { key: 'highlevel', label: 'GoHighLevel', icon: 'Briefcase' },
 ]

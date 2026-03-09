@@ -12,7 +12,7 @@ function SystemsPanel() {
   const tools = Tools.coreTools || (Tools.default ? Tools.default.coreTools : [])
   const patterns = Data.workflowPatterns || (Data.default ? Data.default.workflowPatterns : [])
   const characteristics = Data.systemCharacteristics || (Data.default ? Data.default.systemCharacteristics : [])
-  const featuredTools = tools.slice(0, 6)
+  const featuredTools = tools.slice(0, 10)
   const moreToolsCount = Math.max(tools.length - featuredTools.length, 0)
   const featuredPatterns = patterns.slice(0, 4)
   const morePatternsCount = Math.max(patterns.length - featuredPatterns.length, 0)
