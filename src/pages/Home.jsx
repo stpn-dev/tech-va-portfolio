@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import GlassCard from '../components/GlassCard'
 import PrimaryButton from '../components/PrimaryButton'
 import SectionHeader from '../components/SectionHeader'
 import SystemsPanel from '../components/ui/SystemsPanel'
 import { Download } from '../components/icons/icons'
 import resumePdf from '../assets/documents/Agustinez_Tech VA_Resume.pdf'
+import { getPersonSchema, getWebsiteSchema } from '../config/schema'
 
 const previewCards = [
   {
@@ -26,6 +28,22 @@ const previewCards = [
 
 function Home() {
   return (
+    <>
+      <Helmet>
+        <title>Home | Tech VA Portfolio</title>
+        <meta name="description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
+        <meta property="og:title" content="Tech VA Portfolio - Home" />
+        <meta property="og:description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.devlabstudios.com/" />
+        <meta property="og:image" content="/screenshots/portfolio-home.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tech VA Portfolio - Home" />
+        <meta name="twitter:description" content="Building websites and automation systems for modern businesses." />
+        <meta name="twitter:image" content="/screenshots/portfolio-home.png" />
+        <script type="application/ld+json">{JSON.stringify(getPersonSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(getWebsiteSchema())}</script>
+      </Helmet>
     <div className="space-y-12">
       <GlassCard className="relative p-6 overflow-hidden sm:p-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5" aria-hidden />
@@ -92,6 +110,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

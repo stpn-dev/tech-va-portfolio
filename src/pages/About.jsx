@@ -5,9 +5,24 @@ import aboutData from '../data/about.js'
 import SkillsSection from '../components/ui/SkillsSection'
 import ListItemWithIcon from '../components/ui/ListItemWithIcon'
 import { GraduationCap, Trophy, BadgeCheck } from '../components/icons/icons'
+import { Helmet } from 'react-helmet-async'
 
 function About() {
   return (
+    <>
+      <Helmet>
+        <title>About | Tech VA Portfolio</title>
+        <meta name="description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
+        <meta property="og:title" content="About - Tech VA Portfolio" />
+        <meta property="og:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.devlabstudios.com/about" />
+        <meta property="og:image" content="/screenshots/portfolio-about.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About - Tech VA Portfolio" />
+        <meta name="twitter:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
+        <meta name="twitter:image" content="/screenshots/portfolio-about.png" />
+      </Helmet>
     <div className="space-y-10">
       <SectionHeader
         title="About Me"
@@ -72,6 +87,7 @@ function About() {
         <SkillsSection />
         
     </div>
+    </>
   )
 }
 

@@ -1,0 +1,15 @@
+# robots.txt
+# Allows all search engines to crawl and index the site
+
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Sitemap location for search engines
+Sitemap: https://www.devlabstudios.com/sitemap.xml
+
+# Crawl delay (optional - prevents overwhelming the server)
+Crawl-delay: 1
+
+# Request rate (optional)
+Request-rate: 30/1m

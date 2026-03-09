@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import GlassCard from '../components/GlassCard'
 import SectionHeader from '../components/SectionHeader'
 import AnimatedIcon from '../components/icons/AnimatedIcon'
@@ -10,6 +11,20 @@ function Experiences() {
   const [selectedImage, setSelectedImage] = useState(null)
 
   return (
+    <>
+      <Helmet>
+        <title>Experiences | Tech VA Portfolio</title>
+        <meta name="description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
+        <meta property="og:title" content="Experiences - Tech VA Portfolio" />
+        <meta property="og:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.devlabstudios.com/experiences" />
+        <meta property="og:image" content="/screenshots/portfolio-experiences.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Experiences - Tech VA Portfolio" />
+        <meta name="twitter:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
+        <meta name="twitter:image" content="/screenshots/portfolio-experiences.png" />
+      </Helmet>
     <div className="space-y-8">
       <SectionHeader
         title="Experiences"
@@ -99,6 +114,7 @@ function Experiences() {
         onClose={() => setSelectedImage(null)}
       />
     </div>
+    </>
   )
 }
 

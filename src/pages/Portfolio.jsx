@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import PortfolioRow from '../components/PortfolioRow'
 import SectionHeader from '../components/SectionHeader'
 import ImageModal from '../components/ImageModal'
@@ -20,6 +21,20 @@ function Portfolio() {
   )
 
   return (
+    <>
+      <Helmet>
+        <title>Portfolio | Tech VA Portfolio</title>
+        <meta name="description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
+        <meta property="og:title" content="Portfolio - Tech VA Portfolio" />
+        <meta property="og:description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.devlabstudios.com/portfolio" />
+        <meta property="og:image" content="/screenshots/portfolio-portfolio.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio - Tech VA Portfolio" />
+        <meta name="twitter:description" content="Selected builds, automations, and interface work. Explore website and automation projects." />
+        <meta name="twitter:image" content="/screenshots/portfolio-portfolio.png" />
+      </Helmet>
     <div className="space-y-8">
       <SectionHeader
         title="Portfolio"
@@ -60,6 +75,7 @@ function Portfolio() {
         onClose={() => setSelectedImage(null)}
       />
     </div>
+    </>
   )
 }
 

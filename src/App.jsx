@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
 import MainLayout from './layouts/MainLayout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -6,15 +7,23 @@ import Experiences from './pages/Experiences'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 
-import LandingSampleReact from './pages/LandingSampleReact'
-import LandingSampleHtml from './pages/LandingSampleHtml'
-import LandingSampleFullStack from './pages/LandingSampleFullStack'
-import LandingSampleLocalService from './pages/LandingSampleLocalService'
-import LandingSampleEcommerce from './pages/LandingSampleEcommerce'
+// Code split: Lazy load landing pages for better performance
+const LandingSampleReact = lazy(() => import('./pages/LandingSampleReact'))
+const LandingSampleHtml = lazy(() => import('./pages/LandingSampleHtml'))
+const LandingSampleFullStack = lazy(() => import('./pages/LandingSampleFullStack'))
+const LandingSampleLocalService = lazy(() => import('./pages/LandingSampleLocalService'))
+const LandingSampleEcommerce = lazy(() => import('./pages/LandingSampleEcommerce'))
 
 import NotFound from './pages/errors/NotFound'
 import Maintenance from './pages/errors/Maintenance'
 import ErrorBoundary from './components/ErrorBoundary'
+
+// Fallback component for lazy loaded pages
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-pulse text-white">Loading...</div>
+  </div>
+)
 
 const isMaintenance = import.meta.env.VITE_MAINTENANCE_MODE === 'true'
 
@@ -36,11 +45,11 @@ const router = createBrowserRouter([
       isMaintenance
         ? { path: 'portfolio', element: <Maintenance /> }
         : { path: 'portfolio', element: <Portfolio /> },
-      { path: 'landing-sample-react', element: <LandingSampleReact /> },
-      { path: 'landing-sample-html', element: <LandingSampleHtml /> },
-      { path: 'landing-sample-fullstack', element: <LandingSampleFullStack /> },
-      { path: 'landing-sample-local-service', element: <LandingSampleLocalService /> },
-      { path: 'landing-sample-ecommerce', element: <LandingSampleEcommerce /> },
+      { path: 'landing-sample-react', element: <Suspense fallback={<LoadingFallback />}><LandingSampleReact /></Suspense> },
+      { path: 'landing-sample-html', element: <Suspense fallback={<LoadingFallback />}><LandingSampleHtml /></Suspense> },
+      { path: 'landing-sample-fullstack', element: <Suspense fallback={<LoadingFallback />}><LandingSampleFullStack /></Suspense> },
+      { path: 'landing-sample-local-service', element: <Suspense fallback={<LoadingFallback />}><LandingSampleLocalService /></Suspense> },
+      { path: 'landing-sample-ecommerce', element: <Suspense fallback={<LoadingFallback />}><LandingSampleEcommerce /></Suspense> },
       { path: 'contact', element: <Contact /> },
       { path: '*', element: <NotFound /> },
     ],

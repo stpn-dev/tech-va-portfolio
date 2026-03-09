@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import emailjs from '@emailjs/browser'
 import GlassCard from '../components/GlassCard'
 import SectionHeader from '../components/SectionHeader'
@@ -106,6 +107,20 @@ function Contact() {
   }
 
   return (
+    <>
+      <Helmet>
+        <title>Contact | Tech VA Portfolio</title>
+        <meta name="description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
+        <meta property="og:title" content="Contact - Tech VA Portfolio" />
+        <meta property="og:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.devlabstudios.com/contact" />
+        <meta property="og:image" content="/screenshots/portfolio-contact.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact - Tech VA Portfolio" />
+        <meta name="twitter:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
+        <meta name="twitter:image" content="/screenshots/portfolio-contact.png" />
+      </Helmet>
     <div className="space-y-8">
       <SectionHeader
         title="Contact Me"
@@ -258,6 +273,7 @@ function Contact() {
         </form>
       </GlassCard>
     </div>
+    </>
   )
 }
 

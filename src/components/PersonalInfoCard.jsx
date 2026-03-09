@@ -14,6 +14,7 @@ function PersonalInfoCard({ aboutData }) {
               src={profilePhoto}
               alt="Profile photo of Stephen Rey G. Agustinez"
               className="h-28 w-28 rounded-full border-2 border-white/20 object-cover shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:border-white/40 sm:h-40 sm:w-40"
+              loading="lazy"
             />
             {/* Subtle glow on hover */}
             <div className="absolute inset-0 rounded-full bg-navy-300/0 transition-all duration-300 group-hover:bg-navy-300/10 group-hover:blur-xl" />
