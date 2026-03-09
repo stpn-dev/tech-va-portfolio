@@ -63,7 +63,7 @@ function Portfolio() {
           />
         ))}
         {filteredItems.length === 0 && (
-          <div className="text-center text-navy-200 py-8">No projects in this category yet.</div>
+          <div className="py-8 text-center text-navy-200">No projects in this category yet.</div>
         )}
       </div>
 
