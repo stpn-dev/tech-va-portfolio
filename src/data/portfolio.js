@@ -13,8 +13,71 @@ import project5 from "../assets/projects/project5-gmail-drive-sort.png";
 import project6 from "../assets/projects/project6-fb-messenger-ai.png";
 import project7 from "../assets/projects/project7-ai-social-creator.png";
 
+// Website sample screenshots
+import sampleReact from "../assets/projects/sample-react-landing.png";
+import sampleHtml from "../assets/projects/sample-html-landing.png";
+import sampleFullstack from "../assets/projects/sample-fullstack-landing.png";
+import sampleLocalService from "../assets/projects/sample-local-service-landing.png";
+import sampleEcommerce from "../assets/projects/sample-ecommerce-landing.png";
+
 export const portfolioItems = [
   // --- Automation / AI Automation projects (from screenshots) ---
+  // --- Website Buildouts (Samples) ---
+  {
+    id: "w1-react-modern",
+    title: "Sample Website — Modern React Landing Page",
+    description:
+      "A modern, animated landing page built with React and Tailwind CSS. Showcases a tech-focused, responsive design.",
+    techStack: ["React", "Tailwind CSS"],
+    liveUrl: "/landing-sample-react",
+    sourceUrl: "#",
+    image: sampleReact,
+    type: "Website",
+  },
+  {
+    id: "w2-html-minimalist",
+    title: "Sample Website — Minimalist HTML/CSS/JS",
+    description:
+      "A clean, minimalist landing page using only HTML, CSS, and vanilla JavaScript. Fast, lightweight, and static.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "/landing-sample-html",
+    sourceUrl: "#",
+    image: sampleHtml,
+    type: "Website",
+  },
+  {
+    id: "w4-laravel-fullstack",
+    title: "Sample Website — Full Stack (Laravel + MariaDB)",
+    description:
+      "A dynamic full stack landing page with backend interaction, built using Laravel (PHP) and MariaDB. Features a contact form and dashboard UI.",
+    techStack: ["Laravel", "PHP", "MariaDB", "Blade"],
+    liveUrl: "/landing-sample-fullstack",
+    sourceUrl: "#",
+    image: sampleFullstack,
+    type: "Website",
+  },
+  {
+    id: "w5-local-service",
+    title: "Sample Website — Local Service Business",
+    description:
+      "A local lead-generation website sample with strong call CTAs, booking form, trust stats, and service cards.",
+    techStack: ["React", "Tailwind CSS", "Lead Generation UX"],
+    liveUrl: "/landing-sample-local-service",
+    sourceUrl: "#",
+    image: sampleLocalService,
+    type: "Website",
+  },
+  {
+    id: "w6-ecommerce",
+    title: "Sample Website — E-commerce Product Landing",
+    description:
+      "A conversion-focused e-commerce design with featured product block, product cards, ratings, and purchase CTA flow.",
+    techStack: ["React", "Tailwind CSS", "E-commerce UI"],
+    liveUrl: "/landing-sample-ecommerce",
+    sourceUrl: "#",
+    image: sampleEcommerce,
+    type: "Website",
+  },
   {
     id: "p1-content-repurposing",
     title: "Project #1 — Content Repurposing Automation",

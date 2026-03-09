@@ -4,6 +4,8 @@ import AnimatedIcon from './icons/AnimatedIcon'
 import { ExternalLink, Code2, Zap, Maximize2 } from './icons/icons'
 
 function PortfolioRow({ project, onImageClick }) {
+  const isInternalLiveLink = project.liveUrl?.startsWith('/')
+
   return (
     <GlassCard className="p-6 sm:p-8">
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1.6fr] lg:items-center">
@@ -64,30 +66,37 @@ function PortfolioRow({ project, onImageClick }) {
             ))}
           </div>
 
-          {/* Action buttons (Live Demo and Source Code) - commented out for future use
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton href={project.liveUrl || '#'} variant="primary" className="px-4 py-2">
-              <span>Live Demo</span>
-              <AnimatedIcon
-                icon={ExternalLink}
-                size={16}
-                color="inherit"
-                animationType="hover-slide"
-                ariaLabel="Open live demo in new window"
-              />
-            </PrimaryButton>
-            <PrimaryButton href={project.sourceUrl || '#'} variant="secondary" className="px-4 py-2">
-              <span>Source Code</span>
-              <AnimatedIcon
-                icon={Code2}
-                size={16}
-                color="inherit"
-                animationType="hover-slide"
-                ariaLabel="View source code on GitHub"
-              />
-            </PrimaryButton>
+            {project.liveUrl && project.liveUrl !== '#' ? (
+              <PrimaryButton
+                {...(isInternalLiveLink ? { to: project.liveUrl } : { href: project.liveUrl })}
+                variant="primary"
+                className="px-4 py-2"
+              >
+                <span>Live Demo</span>
+                <AnimatedIcon
+                  icon={ExternalLink}
+                  size={16}
+                  color="inherit"
+                  animationType="hover-slide"
+                  ariaLabel="Open live demo"
+                />
+              </PrimaryButton>
+            ) : null}
+
+            {project.sourceUrl && project.sourceUrl !== '#' ? (
+              <PrimaryButton href={project.sourceUrl} variant="secondary" className="px-4 py-2">
+                <span>Source Code</span>
+                <AnimatedIcon
+                  icon={Code2}
+                  size={16}
+                  color="inherit"
+                  animationType="hover-slide"
+                  ariaLabel="View source code"
+                />
+              </PrimaryButton>
+            ) : null}
           </div>
-          */}
         </div>
       </div>
     </GlassCard>

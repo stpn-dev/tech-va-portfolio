@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import PrimaryButton from '../components/PrimaryButton'
 import AnimatedIcon from '../components/icons/AnimatedIcon'
 import { Mail, Menu, X } from '../components/icons/icons'
-import stpnLogo from '../assets/vectors/stpn.svg'
+import devlabStudiosLogo from '../assets/devlabstudios-logo-only.png'
 
 
 const navLinks = [
@@ -22,9 +22,9 @@ function Navbar() {
     <header className="fixed inset-x-0 top-0 z-40">
       <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-6">
         <div className="flex items-center justify-between px-4 py-3 mt-4 border rounded-2xl border-white/15 bg-white/10 shadow-glass backdrop-blur-lg">
-          <Link to="/" className="flex items-center gap-2 text-lg font-bold tracking-tight text-white">
-            <img src={stpnLogo} alt="" aria-hidden className="w-8 h-8" />
-            <span>STPN</span>
+          <Link to="/" className="flex items-center gap-3 text-lg font-bold tracking-tight text-white">
+            <img src={devlabStudiosLogo} alt="DevLab Studios" className="h-11 w-11 rounded-md object-contain" />
+            <span className="hidden sm:inline">DevLab Studios</span>
           </Link>
 
           <nav className="items-center hidden gap-2 px-2 py-1 rounded-full bg-white/5 md:flex">

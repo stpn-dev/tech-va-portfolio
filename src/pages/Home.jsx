@@ -32,19 +32,19 @@ function Home() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="relative z-10 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-navy-100/80">
-              Tech Virtual Assistant
+              Web Builder + Automation Specialist
             </div>
             <div className="space-y-3">
               <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
-                Building reliable automation systems for modern operations.
+                Building websites and automation systems for modern businesses.
               </h1>
               <p className="text-lg text-slate-200/85 sm:text-xl">
-                I design AI-driven automations, calm dashboards, and polished microsites so founders can move faster with clarity.
+                I create conversion-focused websites, AI-driven automations, and polished dashboards so founders can attract more leads and scale operations with clarity.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <PrimaryButton to="/portfolio">View Portfolio</PrimaryButton>
+    copy: 'Professional experience across website builds, automation, and technical operations.',
               <a
                 href={resumePdf}
                 download="Agustinez_Tech_VA_Resume.pdf"

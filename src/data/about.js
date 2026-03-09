@@ -3,16 +3,16 @@
 
 const aboutData = {
   name: "Stephen Rey G. Agustinez",
-  role: "AI Automation Specialist & Software Engineer",
+  role: "Website Builder, AI Automation Specialist & Software Engineer",
   location: "Pusok, Lapu-Lapu City, Cebu, 6015",
   email: "stpnrey.agustinez@gmail.com",
   phone: "+63 926 237 2965",
   dateOfBirth: "December 4, 2000",
   resumeLink: "https://stpn120400.github.io/stpn-resume/",
   careerObjectives:
-    "Results-driven AI Automation Specialist and Software Engineer seeking a role where I can design, build, and optimize workflow automation systems using tools such as Make.com, Zapier, n8n, and HighLevel. I aim to help organizations streamline operations, reduce manual processes, and improve efficiency through smart automation, AI-powered workflows, and reliable system architecture. Committed to delivering scalable solutions, clear documentation, and high-quality execution across technical and operational environments.",
+    "Results-driven Website Builder, AI Automation Specialist, and Software Engineer seeking a role where I can design, build, and optimize business websites and workflow automation systems using tools such as React, Make.com, Zapier, n8n, and HighLevel. I aim to help organizations grow through high-converting web experiences, streamlined operations, reduced manual processes, and reliable system architecture. Committed to delivering scalable solutions, clear documentation, and high-quality execution across technical and operational environments.",
   shortBio:
-    "AI Automation Specialist and Software Engineer with experience building workflow automations and stand-alone web applications that improve operational efficiency. Skilled in integrating SaaS tools, CRMs, and data platforms, and recognized for clear documentation, reliable execution, and process-oriented problem solving across technical and operational environments.",
+    "Website Builder, AI Automation Specialist, and Software Engineer with experience creating business websites, conversion-focused landing pages, and workflow automations that improve operational efficiency. Skilled in integrating SaaS tools, CRMs, and data platforms, and recognized for clear documentation, reliable execution, and process-oriented problem solving across technical and operational environments.",
   education: [
     {
       program: "Bachelor of Science in Computer Engineering",
