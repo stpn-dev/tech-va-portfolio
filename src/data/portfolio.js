@@ -25,7 +25,7 @@ export const portfolioItems = [
   // --- Website Buildouts (Samples) ---
   {
     id: "w1-react-modern",
-    title: "Sample Website — Modern React Landing Page",
+    title: "Modern React Landing Page",
     description:
       "A modern, animated landing page built with React and Tailwind CSS. Showcases a tech-focused, responsive design.",
     techStack: ["React", "Tailwind CSS"],
@@ -36,7 +36,7 @@ export const portfolioItems = [
   },
   {
     id: "w2-html-minimalist",
-    title: "Sample Website — Minimalist HTML/CSS/JS",
+    title: "Minimalist HTML/CSS/JS",
     description:
       "A clean, minimalist landing page using only HTML, CSS, and vanilla JavaScript. Fast, lightweight, and static.",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -47,7 +47,7 @@ export const portfolioItems = [
   },
   {
     id: "w4-laravel-fullstack",
-    title: "Sample Website — Full Stack (Laravel + MariaDB)",
+    title: "Full Stack (Laravel + MariaDB)",
     description:
       "A dynamic full stack landing page with backend interaction, built using Laravel (PHP) and MariaDB. Features a contact form and dashboard UI.",
     techStack: ["Laravel", "PHP", "MariaDB", "Blade"],
@@ -58,7 +58,7 @@ export const portfolioItems = [
   },
   {
     id: "w5-local-service",
-    title: "Sample Website — Local Service Business",
+    title: "Local Service Business",
     description:
       "A local lead-generation website sample with strong call CTAs, booking form, trust stats, and service cards.",
     techStack: ["React", "Tailwind CSS", "Lead Generation UX"],
@@ -69,7 +69,7 @@ export const portfolioItems = [
   },
   {
     id: "w6-ecommerce",
-    title: "Sample Website — E-commerce Product Landing",
+    title: "E-commerce Product Landing",
     description:
       "A conversion-focused e-commerce design with featured product block, product cards, ratings, and purchase CTA flow.",
     techStack: ["React", "Tailwind CSS", "E-commerce UI"],
@@ -80,7 +80,7 @@ export const portfolioItems = [
   },
   {
     id: "p1-content-repurposing",
-    title: "Project #1 — Content Repurposing Automation",
+    title: "Content Repurposing Automation",
     description:
       "Automation that repurposes content from a single uploaded file by filtering inputs, generating AI outputs, and routing results into multiple publishing paths (e.g., Facebook Pages and LinkedIn).",
     techStack: ["Zapier", "Google Drive", "AI by Zapier", "Facebook Pages", "LinkedIn"],
@@ -91,7 +91,7 @@ export const portfolioItems = [
   },
   {
     id: "p2-escalation-email",
-    title: "Project #2.3 — Automated Email Response for Escalations",
+    title: "Automated Email Response for Escalations",
     description:
       "Scheduled workflow that checks tasks and sends email responses for escalations, keeping communication consistent and reducing manual handling.",
     techStack: ["Zapier", "Schedule", "Asana", "Gmail"],
@@ -102,7 +102,7 @@ export const portfolioItems = [
   },
   {
     id: "p2-quote-follow-up",
-    title: "Project #2.4 — Quote Follow-up Automation",
+    title: "Quote Follow-up Automation",
     description:
       "Weekly scheduled automation that finds relevant tasks and sends quote follow-up emails to improve response rates and maintain consistent outreach.",
     techStack: ["Zapier", "Schedule", "Asana", "Gmail"],
@@ -113,7 +113,7 @@ export const portfolioItems = [
   },
   {
     id: "p2-combined-automation",
-    title: "Project #2 — Combined Multi-step Client Workflow Automation",
+    title: "Combined Multi-step Client Workflow Automation",
     description:
       "End-to-end workflow triggered by task updates that branches into multiple paths (ready to start, no response, approved, paid & closed), creates folders/subtasks, and sends appropriate email sequences per service.",
     techStack: ["Zapier", "Asana", "Gmail", "Google Drive", "Paths/Router"],
@@ -124,7 +124,7 @@ export const portfolioItems = [
   },
   {
     id: "p3-leads-enrichment",
-    title: "Project #3 — Automated Leads Enrichment",
+    title: "Automated Leads Enrichment",
     description:
       "Webhook-driven enrichment that formats incoming lead data, enriches via external lookup, routes by priority, logs high-priority leads to Sheets, notifies stakeholders, and emails outcomes.",
     techStack: ["Zapier", "Webhooks", "Formatter", "Google Sheets", "Slack", "Gmail"],
@@ -135,7 +135,7 @@ export const portfolioItems = [
   },
   {
     id: "p4-xero-to-asana",
-    title: "Project #4 — Export Xero Transactions → Upload CSV to Asana",
+    title: "Export Xero Transactions → Upload CSV to Asana",
     description:
       "Pulls account transactions from Xero via API, routes/iterates records, writes and aggregates data in Google Sheets, then uploads the generated CSV/attachment to Asana for processing and tracking.",
     techStack: ["Make (Integromat)", "Xero API", "Google Sheets", "Iterator/Router", "Asana"],
@@ -146,7 +146,7 @@ export const portfolioItems = [
   },
   {
     id: "p5-gmail-attachments-drive",
-    title: "Project #5 — Auto-sort Gmail Attachments to Google Drive",
+    title: "Auto-sort Gmail Attachments to Google Drive",
     description:
       "Watches Gmail, extracts attachments, optionally uses Gemini AI for processing, uploads files to Drive, logs metadata to Google Sheets, and sends confirmation emails for visibility.",
     techStack: ["Make (Integromat)", "Gmail", "Google Drive", "Google Sheets", "Gemini AI"],
@@ -157,7 +157,7 @@ export const portfolioItems = [
   },
   {
     id: "p6-messenger-ai-agent",
-    title: "Project #6 — Facebook Messenger AI Agent",
+    title: "Facebook Messenger AI Agent",
     description:
       "Webhook-based Messenger agent that filters events, fetches context, generates AI replies, triggers downstream actions via HTTP, and responds back through the webhook flow.",
     techStack: ["n8n", "Webhooks", "AI Agent", "HTTP Request", "Gemini Chat Model", "Memory"],
@@ -168,7 +168,7 @@ export const portfolioItems = [
   },
   {
     id: "p7-ai-social-content",
-    title: "Project #7 — AI Social Media Content Creator",
+    title: "AI Social Media Content Creator",
     description:
       "Scheduled pipeline that generates quote copy, checks duplicates in Google Sheets, fetches weather data, generates images, saves image URLs, and publishes to Facebook using Graph API.",
     techStack: ["n8n", "Schedule", "OpenWeatherMap", "Google Sheets", "Facebook Graph API", "Gemini Chat Model"],

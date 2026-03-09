@@ -29,8 +29,8 @@ function Home() {
     <div className="space-y-12">
       <GlassCard className="relative p-6 overflow-hidden sm:p-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5" aria-hidden />
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="relative z-10 space-y-6">
+        <div className="grid items-center gap-8 lg:grid-cols-12">
+          <div className="relative z-10 space-y-6 lg:col-span-7 xl:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-navy-100/80">
               Web Builder + Automation Specialist
             </div>
@@ -44,7 +44,6 @@ function Home() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-    copy: 'Professional experience across website builds, automation, and technical operations.',
               <a
                 href={resumePdf}
                 download="Agustinez_Tech_VA_Resume.pdf"
@@ -65,7 +64,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="relative z-10">
+          <div className="relative z-10 lg:col-span-5 xl:col-span-5 xl:pl-2">
             <SystemsPanel />
           </div>
         </div>
@@ -82,8 +81,7 @@ function Home() {
               <GlassCard className="h-full p-5">
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-sm uppercase tracking-[0.14em] text-navy-100/80">Section</p>
-                    <h3 className="mt-2 text-xl font-semibold text-white">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                   </div>
                   <span className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/80">Open</span>
                 </div>
