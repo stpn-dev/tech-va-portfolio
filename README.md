@@ -2,7 +2,7 @@
 
 A professional, data-driven portfolio site showcasing AI automation systems, technical workflows, and software engineering projects. Built with modern web technologies and designed for clarity, maintainability, and accessibility.
 
-**Live Site:** [https://stpn120400.github.io/tech-va-portfolio/](https://stpn120400.github.io/tech-va-portfolio/)
+**Live Site:** [https://www.devlabstudios.com/](https://www.devlabstudios.com/)
 
 ---
 
@@ -42,8 +42,8 @@ This portfolio serves as a professional showcase for **Stephen Rey G. Agustinez*
 - **Safe Error Handling** — 404 pages, maintenance mode, and React error boundaries
 - **Accessibility Considerations** — Semantic HTML, ARIA labels, keyboard navigation support
 - **Reduced Motion Support** — Respects user preferences for animation
-- **EmailJS Integration** — Secure contact form without exposing backend credentials
-- **GitHub Pages Deployment** — Automated build and deploy via GitHub Actions
+- **Zoho Integration** — Contact form submissions routed through a Zoho endpoint
+- **Cloudflare Pages Deployment** — Connected to GitHub for continuous deployments
 
 ---
 
@@ -56,9 +56,9 @@ This portfolio serves as a professional showcase for **Stephen Rey G. Agustinez*
 | **Styling** | Tailwind CSS 3.4 |
 | **Routing** | React Router v7 |
 | **Icons** | Lucide React |
-| **Email Service** | EmailJS |
+| **Contact Service** | Zoho (Webhook/Form Endpoint) |
 | **Linting** | ESLint 9 + Stylelint |
-| **Deployment** | GitHub Pages |
+| **Deployment** | Cloudflare Pages |
 
 ---
 
@@ -263,16 +263,15 @@ npm install
 Create a `.env` file in the project root:
 
 ```env
-# EmailJS Configuration
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+# Contact Configuration
+VITE_CONTACT_API_URL=/api/contact
+ZOHO_WEBHOOK_URL=https://your-zoho-endpoint-here
 
 # Maintenance Mode (optional)
 VITE_MAINTENANCE_MODE=false
 ```
 
-Get EmailJS credentials from [emailjs.com](https://www.emailjs.com/).
+Use `/api/contact` in the frontend and keep `ZOHO_WEBHOOK_URL` as a server-side secret/proxy target.
 
 ### Running Locally
 
@@ -290,36 +289,38 @@ npm run preview
 npm run lint
 ```
 
-Development server runs at `http://localhost:5173/tech-va-portfolio/`
+Development server runs at `http://localhost:5173/`
 
 ---
 
 ## 🌐 Deployment
 
-The site is deployed to **GitHub Pages** via GitHub Actions.
+The site is deployed to **Cloudflare Pages** with GitHub integration.
 
 ### Deployment Process
 
-1. Push changes to the `main` branch
-2. GitHub Actions automatically runs:
-   - `npm install`
-   - `npm run build`
-   - Deploys `dist/` to `gh-pages` branch
-3. Site updates at `https://stpn120400.github.io/tech-va-portfolio/`
+1. Connect the repository to Cloudflare Pages
+2. Configure build settings:
+  - Framework preset: `Vite`
+  - Build command: `npm run build`
+  - Build output directory: `dist`
+3. Add environment variables in Cloudflare Pages project settings:
+  - `ZOHO_WEBHOOK_URL` (Secret)
+  - `VITE_CONTACT_API_URL` (`/api/contact`)
+  - `VITE_MAINTENANCE_MODE` (optional)
+4. Push changes to `main` and Cloudflare deploys automatically.
 
 ### Configuration Notes
 
-- **Base Path:** Set in `vite.config.js` as `/tech-va-portfolio/`
-- **SPA Routing:** `public/404.html` redirects invalid routes to `index.html`
-- **Environment Variables:** Set in GitHub repository secrets for production builds
+- **Base Path:** Set in `vite.config.js` as `/`.
+- **SPA Routing:** `public/_redirects` rewrites all routes to `index.html`.
+- **Security Headers:** `public/_headers` applies CSP and browser hardening headers.
 
-### Manual Deployment
-
-If needed, deploy manually:
+### Manual Deployment (Optional)
 
 ```bash
 npm run build
-# Upload dist/ folder to hosting provider
+# Upload dist/ to Cloudflare Pages via dashboard or wrangler pages deploy
 ```
 
 ---
@@ -424,7 +425,7 @@ theme: {
 ## ⚠️ Known Limitations
 
 - **Static Site** — No backend, all data is client-side and static
-- **Email Rate Limits** — EmailJS free tier has monthly send limits
+- **Contact Endpoint Limits** — Your Zoho plan/workflow may enforce monthly or per-minute limits
 - **No CMS** — Content updates require code changes and redeployment
 - **Image Optimization** — Images are not auto-optimized (consider manual compression)
 
@@ -440,7 +441,7 @@ This project is **private** and not licensed for reuse without permission.
 - [Vite](https://vite.dev/) — Build tool
 - [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS
 - [Lucide React](https://lucide.dev/) — Icon library
-- [EmailJS](https://www.emailjs.com/) — Email service
+- [Zoho](https://www.zoho.com/) — Contact workflow endpoint provider
 - [React Router](https://reactrouter.com/) — Client-side routing
 
 ### Icon & Asset Credits

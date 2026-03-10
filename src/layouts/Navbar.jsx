@@ -4,6 +4,8 @@ import PrimaryButton from '../components/PrimaryButton'
 import AnimatedIcon from '../components/icons/AnimatedIcon'
 import { Mail, Menu, X } from '../components/icons/icons'
 import devlabStudiosLogo from '../assets/devlabstudios-logo-only.png'
+import devlabStudiosLogoWebp from '../assets/devlabstudios-logo-only.webp'
+
 
 
 const navLinks = [
@@ -23,7 +25,17 @@ function Navbar() {
       <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-6">
         <div className="flex items-center justify-between px-4 py-3 mt-4 border rounded-2xl border-white/15 bg-white/10 shadow-glass backdrop-blur-lg">
           <Link to="/" className="flex items-center gap-3 text-lg font-bold tracking-tight text-white">
-            <img src={devlabStudiosLogo} alt="DevLab Studios" className="h-11 w-11 rounded-md object-contain" />
+              <picture>
+                <source srcSet={devlabStudiosLogoWebp} type="image/webp" />
+                <img
+                  src={devlabStudiosLogo}
+                  alt="DevLab Studios"
+                  className="h-11 w-11 rounded-md object-contain"
+                  loading="lazy"
+                  width="44"
+                  height="44"
+                />
+              </picture>
             <span className="hidden sm:inline">DevLab Studios</span>
           </Link>
 

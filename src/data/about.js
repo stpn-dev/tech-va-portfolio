@@ -5,7 +5,7 @@ const aboutData = {
   name: "Stephen Rey G. Agustinez",
   role: "Website Builder, AI Automation Specialist & Software Engineer",
   location: "Pusok, Lapu-Lapu City, Cebu, 6015",
-  email: "stpnrey.agustinez@gmail.com",
+  email: "stephen@devlabstudios.com",
   phone: "+63 926 237 2965",
   dateOfBirth: "December 4, 2000",
   resumeLink: "https://stpn120400.github.io/stpn-resume/",

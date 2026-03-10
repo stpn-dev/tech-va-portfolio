@@ -323,9 +323,8 @@ export const ERROR_MESSAGES = {
 ```
 # .env
 VITE_MAINTENANCE_MODE=false
-VITE_EMAILJS_SERVICE_ID=...
-VITE_EMAILJS_TEMPLATE_ID=...
-VITE_EMAILJS_PUBLIC_KEY=...
+VITE_CONTACT_API_URL=/api/contact
+ZOHO_WEBHOOK_URL=https://your-zoho-endpoint-here
 ```
 
 ## 🧪 Testing Error Pages

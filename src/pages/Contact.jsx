@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import emailjs from '@emailjs/browser'
 import GlassCard from '../components/GlassCard'
 import SectionHeader from '../components/SectionHeader'
 import PrimaryButton from '../components/PrimaryButton'
@@ -23,9 +22,7 @@ function Contact() {
 
   const config = useMemo(
     () => ({
-      serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      apiUrl: import.meta.env.VITE_CONTACT_API_URL || '/api/contact',
     }),
     [],
   )
@@ -60,10 +57,10 @@ function Contact() {
       return
     }
 
-    if (!config.serviceId || !config.templateId || !config.publicKey) {
+    if (!config.apiUrl) {
       setStatus({
         type: 'error',
-        message: 'EmailJS environment variables are missing. Check your .env settings.',
+        message: 'Contact endpoint is missing. Check your .env settings.',
       })
       return
     }
@@ -72,19 +69,26 @@ function Contact() {
     setStatus(null)
 
     try {
-      await emailjs.send(
-        config.serviceId,
-        config.templateId,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          subject: form.subject,
-          message: form.message,
+      const payload = {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+        source: 'devlabstudios-contact-form',
+      }
+
+      const requestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        {
-          publicKey: config.publicKey,
-        },
-      )
+        body: JSON.stringify(payload),
+      }
+
+      const response = await fetch(config.apiUrl, requestInit)
+      if (!response.ok) {
+        throw new Error(`Zoho submission failed with status ${response.status}`)
+      }
 
       setStatus({
         type: 'success',
@@ -249,7 +253,7 @@ function Contact() {
                 </>
               )}
             </PrimaryButton>
-            <span className="text-sm text-slate-200/80">Responses will be routed to Gmail.</span>
+            <span className="text-sm text-slate-200/80">Responses will be routed via Zoho.</span>
           </div>
 
           {status ? (
