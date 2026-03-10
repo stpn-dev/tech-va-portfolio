@@ -1,0 +1,13 @@
+{
+  "name": "tech-va-portfolio",
+  "main": "functions/api/contact.js",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-03-10",
+  "env": {
+    "production": {
+      "secrets": [
+        "ZOHO_WEBHOOK_URL"
+      ]
+    }
+  }
+}
