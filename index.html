@@ -36,6 +36,11 @@
     }
     </script>
     
+    <!-- Font preconnect + async load (non-render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" /></noscript>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/devlabstudios-logo-only.png" />
     <!-- Google tag (gtag.js) -->
@@ -45,7 +50,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-MD3PL91M9G');
+      gtag('config', 'G-MD3PL91M9G', { client_storage: 'none', anonymize_ip: true });
     </script>
   </head>
   <body>

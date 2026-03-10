@@ -26,5 +26,17 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     base: '/',
     server: proxy ? { proxy } : undefined,
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom'],
+            'router': ['react-router-dom'],
+            'ui-vendor': ['lucide-react', 'clsx'],
+            'helmet': ['react-helmet-async'],
+          },
+        },
+      },
+    },
   }
 })
