@@ -1,5 +1,5 @@
-// Cloudflare Pages Function: server-side proxy for Zoho webhook submissions.
-// Keeps Zoho URL and zapikey out of browser requests and avoids CORS failures.
+// Cloudflare Worker: routes /api/contact to Zoho proxy, serves everything
+// else from static assets (built React SPA in dist/).
 
 function jsonResponse(status, body) {
   return new Response(JSON.stringify(body), {
@@ -11,7 +11,7 @@ function jsonResponse(status, body) {
   })
 }
 
-export async function onRequestOptions() {
+function handleOptions() {
   return new Response(null, {
     status: 204,
     headers: {
@@ -23,15 +23,15 @@ export async function onRequestOptions() {
   })
 }
 
-export async function onRequestPost(context) {
-  const webhookUrl = context.env.ZOHO_WEBHOOK_URL
+async function handleContact(request, env) {
+  const webhookUrl = env.ZOHO_WEBHOOK_URL
   if (!webhookUrl) {
     return jsonResponse(500, { error: 'Server misconfiguration: ZOHO_WEBHOOK_URL missing.' })
   }
 
   let payload
   try {
-    payload = await context.request.json()
+    payload = await request.json()
   } catch {
     return jsonResponse(400, { error: 'Invalid JSON payload.' })
   }
@@ -45,9 +45,7 @@ export async function onRequestPost(context) {
   try {
     const upstream = await fetch(webhookUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
 
@@ -59,4 +57,19 @@ export async function onRequestPost(context) {
   } catch {
     return jsonResponse(502, { error: 'Unable to reach Zoho endpoint.' })
   }
+}
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url)
+
+    if (url.pathname === '/api/contact') {
+      if (request.method === 'OPTIONS') return handleOptions()
+      if (request.method === 'POST') return handleContact(request, env)
+      return new Response('Method not allowed', { status: 405 })
+    }
+
+    // All other requests served from static assets (dist/)
+    return env.ASSETS.fetch(request)
+  },
 }
