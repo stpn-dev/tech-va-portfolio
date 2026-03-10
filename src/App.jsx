@@ -21,7 +21,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 // Fallback component for lazy loaded pages
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-pulse text-white">Loading...</div>
+    <div className="text-white animate-pulse">Loading...</div>
   </div>
 )
 
