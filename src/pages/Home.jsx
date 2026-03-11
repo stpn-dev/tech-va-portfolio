@@ -30,16 +30,17 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | DevLab Studios</title>
-        <meta name="description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
-        <meta property="og:title" content="DevLab Studios - Home" />
-        <meta property="og:description" content="Building websites and automation systems for modern businesses. Conversion-focused websites, AI-driven automations, and dashboards for founders." />
+        <title>Devlab Studios – Website Developer &amp; AI Automation Specialist</title>
+        <meta name="description" content="Devlab Studios by Stephen Rey Agustinez — freelance website developer and AI automation specialist. Building conversion-focused websites with React and workflow automations with Zapier and n8n for modern businesses worldwide. Available for remote engagements." />
+        <meta name="keywords" content="Stephen Agustinez, Stephen Rey Agustinez, Devlab Studios, website developer, freelance web developer, AI automation specialist, workflow automation, Zapier, n8n, React developer, landing page developer, remote web developer, business automation" />
+        <meta property="og:title" content="Devlab Studios – Website Developer &amp; AI Automation Specialist" />
+        <meta property="og:description" content="Devlab Studios — freelance website developer and AI automation specialist. Building conversion-focused websites and workflow automations (Zapier, n8n) for modern businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/" />
         <meta property="og:image" content="/screenshots/portfolio-home.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DevLab Studios - Home" />
-        <meta name="twitter:description" content="Building websites and automation systems for modern businesses." />
+        <meta name="twitter:title" content="Devlab Studios – Website Developer &amp; AI Automation Specialist" />
+        <meta name="twitter:description" content="Devlab Studios — freelance website developer and AI automation specialist. Building conversion-focused websites and workflow automations for modern businesses." />
         <meta name="twitter:image" content="/screenshots/portfolio-home.png" />
         <script type="application/ld+json">{JSON.stringify(getPersonSchema())}</script>
         <script type="application/ld+json">{JSON.stringify(getWebsiteSchema())}</script>

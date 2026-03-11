@@ -13,16 +13,17 @@ function Experiences() {
   return (
     <>
       <Helmet>
-        <title>Experiences | DevLab Studios</title>
-        <meta name="description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
-        <meta property="og:title" content="Experiences - DevLab Studios" />
-        <meta property="og:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
+        <title>Work Experience – Website Developer &amp; AI Automation Specialist | Devlab Studios</title>
+        <meta name="description" content="Professional experience of Devlab Studios as a website developer and AI automation specialist. Past roles include AI Automation Specialist (self-employed), Software Engineer at Accenture, and Process Engineer at ONSEMI — with expertise in React, Zapier, n8n, Power BI, and business automation." />
+        <meta name="keywords" content="web developer experience, AI automation specialist experience, Zapier automation work history, n8n developer, software engineer, React developer experience, business automation projects, freelance developer portfolio" />
+        <meta property="og:title" content="Work Experience – Website Developer &amp; AI Automation Specialist | Devlab Studios" />
+        <meta property="og:description" content="Devlab Studios professional experience as a website developer and AI automation specialist. Roles include software engineer at Accenture and self-employed AI automation specialist." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/experiences" />
         <meta property="og:image" content="/screenshots/portfolio-experiences.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Experiences - DevLab Studios" />
-        <meta name="twitter:description" content="Roles, responsibilities, and achievements across professional operations and technical VA work." />
+        <meta name="twitter:title" content="Work Experience – Website Developer &amp; AI Automation Specialist" />
+        <meta name="twitter:description" content="Work history as website developer and AI automation specialist — Accenture, ONSEMI, and self-employed automation projects." />
         <meta name="twitter:image" content="/screenshots/portfolio-experiences.png" />
       </Helmet>
     <div className="space-y-8">

@@ -113,16 +113,17 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact | DevLab Studios</title>
-        <meta name="description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
-        <meta property="og:title" content="Contact - DevLab Studios" />
-        <meta property="og:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
+        <title>Hire a Website Developer &amp; AI Automation Specialist | Contact Devlab Studios</title>
+        <meta name="description" content="Get in touch with Devlab Studios — available to hire as a freelance website developer or AI automation specialist. Inquire about website projects, Zapier automations, n8n workflows, or AI agent development. Remote-first, worldwide." />
+        <meta name="keywords" content="hire website developer, hire AI automation specialist, freelance web developer for hire, Zapier automation service, n8n automation hire, contact web developer, remote developer hire, business automation consultant" />
+        <meta property="og:title" content="Hire a Website Developer &amp; AI Automation Specialist | Contact Devlab Studios" />
+        <meta property="og:description" content="Hire Devlab Studios for website development or AI automation projects. Remote-first, available worldwide. Specializing in React, Zapier, n8n, and AI agents." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.devlabstudios.com/contact" />
         <meta property="og:image" content="/screenshots/portfolio-contact.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact - DevLab Studios" />
-        <meta name="twitter:description" content="Share a project, request, or support need. Get in touch for web, automation, or consulting inquiries." />
+        <meta name="twitter:title" content="Hire a Website Developer &amp; AI Automation Specialist | Contact Devlab Studios" />
+        <meta name="twitter:description" content="Hire Devlab Studios for website development or AI automation. Remote-first, available worldwide." />
         <meta name="twitter:image" content="/screenshots/portfolio-contact.png" />
       </Helmet>
     <div className="space-y-8">

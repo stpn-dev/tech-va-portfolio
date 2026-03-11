@@ -11,16 +11,17 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | DevLab Studios</title>
-        <meta name="description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
-        <meta property="og:title" content="About - DevLab Studios" />
-        <meta property="og:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
+        <title>About Devlab Studios – Freelance Website Developer &amp; AI Automation Expert</title>
+        <meta name="description" content="Learn about Devlab Studios — a freelance website developer and AI automation expert based in the Philippines, available for remote work worldwide. Skills include React, Tailwind CSS, Laravel, Zapier, n8n, and AI agent development." />
+        <meta name="keywords" content="about website developer, freelance developer Philippines, AI automation expert, React developer, Zapier specialist, n8n developer, remote freelance developer, web developer resume" />
+        <meta property="og:title" content="About Devlab Studios – Freelance Website Developer &amp; AI Automation Expert" />
+        <meta property="og:description" content="Devlab Studios — freelance website developer and AI automation expert. Skills include React, Tailwind CSS, Laravel, Zapier, n8n, and AI agent development. Available for remote work worldwide." />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.devlabstudios.com/about" />
         <meta property="og:image" content="/screenshots/portfolio-about.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About - DevLab Studios" />
-        <meta name="twitter:description" content="A concise overview of how I work, what I value, and the skills I bring to each engagement." />
+        <meta name="twitter:title" content="About Devlab Studios – Freelance Website Developer &amp; AI Automation Expert" />
+        <meta name="twitter:description" content="Devlab Studios — freelance website developer and AI automation expert. React, Tailwind CSS, Laravel, Zapier, n8n. Available for remote work worldwide." />
         <meta name="twitter:image" content="/screenshots/portfolio-about.png" />
       </Helmet>
     <div className="space-y-10">
