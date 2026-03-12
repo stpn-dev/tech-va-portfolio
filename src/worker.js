@@ -63,6 +63,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url)
 
+    // Redirect non-www to www (permanent 301 for canonical consolidation)
+    if (url.hostname === 'devlabstudios.com') {
+      url.hostname = 'www.devlabstudios.com'
+      return Response.redirect(url.toString(), 301)
+    }
+
     if (url.pathname === '/api/contact') {
       if (request.method === 'OPTIONS') return handleOptions()
       if (request.method === 'POST') return handleContact(request, env)
